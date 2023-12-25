@@ -33,14 +33,37 @@ while True:
                 fingers.append(0)
         #print(fingers)
         totalFingers=fingers.count(1)
-        for i in fingers:
-            if fingers[i]==1:
-                mybolt.digitalWrite(str(i),'HIGH')
-            else:
-                mybolt.digitalWrite(str(i),'LOW')
-
-        
-
+        if totalFingers==1:
+            mybolt.digitalWrite('0','HIGH')
+            mybolt.digitalWrite('1','LOW')
+            mybolt.digitalWrite('2','LOW')
+            mybolt.digitalWrite('3','LOW')
+            mybolt.digitalWrite('4','LOW')
+        if totalFingers==2:
+            mybolt.digitalWrite('0','HIGH')
+            mybolt.digitalWrite('1','HIGH')
+            mybolt.digitalWrite('2','LOW')
+            mybolt.digitalWrite('3','LOW')
+            mybolt.digitalWrite('4','LOW')
+        if totalFingers==3:
+            mybolt.digitalWrite('0','HIGH')
+            mybolt.digitalWrite('1','HIGH')
+            mybolt.digitalWrite('2','HIGH')
+            mybolt.digitalWrite('3','LOW')
+            mybolt.digitalWrite('4','LOW')
+        if totalFingers==4:
+            mybolt.digitalWrite('0','HIGH')
+            mybolt.digitalWrite('1','HIGH')
+            mybolt.digitalWrite('2','HIGH')
+            mybolt.digitalWrite('3','HIGH')
+            mybolt.digitalWrite('4','LOW')
+        if totalFingers==5:
+            mybolt.digitalWrite('0','HIGH')
+            mybolt.digitalWrite('1','HIGH')
+            mybolt.digitalWrite('2','HIGH')
+            mybolt.digitalWrite('3','HIGH')
+            mybolt.digitalWrite('4','HIGH')
+            
 
     cv2.imshow("IMAGE",img)
     cv2.waitKey(20)
